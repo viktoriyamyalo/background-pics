@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Background extends Component {
     state = { pictures: [] };
 
-    componentDidMount() {
+    componentWillMount() {
         fetch('https://randomuser.me/api/?results=5000')
             .then(result => result.json())
             .then(resultJSON => {
